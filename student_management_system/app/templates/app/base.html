@@ -1,0 +1,1128 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="{% static 'app/css/all.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <title>School managment project</title>
+
+</head>
+
+<body>
+    <!--navbar section -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <div class="container-fluid">
+                        <img src="https://seeklogo.com/images/A/army-public-school-logo-66838E4AE8-seeklogo.com.png"
+                            style="width: 45px; height:45px" alt="">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Welcome to Student Pannel
+                                    </a>
+                                </li>
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- dashboard section -->
+    <!-- <div class="container-1">
+        <div class="row">
+            <div class="col-sm-3" style="background-color: rgb(180, 173, 173) ;">
+                <nav class="nav flex-column">
+                    <!--  -->
+
+    <!--  -->
+    <!--                   <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Take Attendance
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dashboard
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Teacher</a></li>
+                            <li><a class="dropdown-item" href="#">Student</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            View Update Attendance
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Add Result
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Apply for Leave
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Send Feedback
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Notification
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Log Out
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                </nav>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="row" style="background-color: rgb(67, 165, 204);">
+                    <h3>Welcome ! Dashboard</h3>
+                </div>-->
+    <!-- <div class="container"> -->
+    <!-- <div class="row pt-2">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://images.collegedunia.com/public/image/6faa4c8f386556a3dac40476e18d00b7.png?tr=w-1000,h-500,c-force?tr=w-800,h-400,c-force"
+                                    alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.collegedunia.com/public/image/6faa4c8f386556a3dac40476e18d00b7.png?tr=w-1000,h-500,c-force?tr=w-800,h-400,c-force"
+                                    alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.collegedunia.com/public/image/6faa4c8f386556a3dac40476e18d00b7.png?tr=w-1000,h-500,c-force?tr=w-800,h-400,c-force"
+                                    alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div> -->
+    <!-- </div> -->
+    <!-- <div class="row mt-3">
+                    <div class="col">
+                        <div class="card card-1">
+                            <div class="card-body">
+                                <img src="https://as2.ftcdn.net/v2/jpg/02/19/98/93/1000_F_219989372_K1pBzmbiGfoMd6X5JJd5SYOVIBzSUN8f.jpg"
+                                    style="width:10px; height:10px;" alt="">
+                                <h5 class="card-title">Student</h5>
+                                <p class="card-text">5</p>
+                                <p class="card-text"><small class="text-muted">Last</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-2">
+                            <div class="card-body">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsRqSLxGJT3YJocc20LgMB5eaaBzyBM2klyg&usqp=CAU"
+                                    style="width:10px; height:10px;" alt="">
+                                <h5 class="card-title">Staff</h5>
+                                <p class="card-text">3</p>
+                                <p class="card-text"><small class="text-muted">Last</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-3">
+                            <div class="card-body">
+                                <img src="https://images-platform.99static.com//KlBLMX8dQrcq6hZGnxf5HSnG29I=/8x543:525x1060/fit-in/500x500/99designs-contests-attachments/123/123360/attachment_123360235"
+                                    style="width:10px; height:10px;" alt="">
+                                <h5 class="card-title">Course</h5>
+                                <p class="card-text">5</p>
+                                <p class="card-text"><small class="text-muted">Last</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-4">
+                            <div class="card-body">
+                                <img src="https://image.shutterstock.com/image-vector/logo-education-school-university-vector-260nw-1565348632.jpg"
+                                    style="width:10px; height:10px;" alt="">
+                                <h5 class="card-title">Subjects</h5>
+                                <p class="card-text">6</p>
+                                <p class="card-text"><small class="text-muted">Last</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    <!--        <div class="row">
+                    <div class="col mt-3">
+                        <img src="https://www.math-only-math.com/images/xwhat-is-bar-graph.jpg.pagespeed.ic.immsC5AAmA.jpg"
+                            style="width:300px;" alt="">
+                    </div>
+                    <div class="col">
+                        <img src="https://storage.googleapis.com/tb-img/production/20/05/Satya%20DI_Sunny_23.5.2020%201%27.png"
+                            style="width:300px;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- section2 add data student-->
+    <!-- <div class="container-3">
+        <div class="row pt-2 mt-5 text-center" style="background-color: pink; ">
+            <div class="col">
+                <h2>Add Student Details</h2>
+            </div>
+        </div>
+        <div class="row mt-4 ">
+            <div class="col">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        <h1>{{ form }}</h1>
+                    </table>
+
+                    <input type="submit" class="btn btn-success" value="Add">
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- section 3 show data student-->
+    <!-- <div class="container-4">
+        <div class="row pt-2 mt-5 text-center" style="background-color: rgb(122, 122, 175); ">
+            <div class="col">
+                <h2>Show Student Details</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if stu %}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Father Name</th>
+                            <th scope="col">Mother Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Class</th>
+                            <th scope="col">Contact Number</th>
+                            <th scope="col">Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for st in stu %}
+                        <tr>
+                            <th scope="row">{{st.id}}</th>
+                            <td>{{st.Name}}</td>
+                            <td>{{st.Father_name}}</td>
+                            <td>{{st.Mother_name}}</td>
+                            <td>{{st.Email}}</td>
+                            <td>{{st.Class}}</td>
+                            <td>{{st.Contact_number}}</td>
+                            <td>{{st.Address}}</td>
+                            <td>
+                                <a href="{% url 'updatedata' st.id %}" class="btn btn-warning btn-sm">Edit</a>
+                                <form action="{% url 'deletedata' st.id %}" method="post" class="d-inline">
+                                    {% csrf_token %}
+                                    <input type="submit" class="btn btn-danger" value="Delete">
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% endif %}
+            </div>
+        </div>
+    </div> -->
+
+    <!--  section 4 update student details -->
+    <!-- <div class="container-5">
+        <div class="row pt-2 mt-5 text-center" style="background-color: pink; ">
+            <div class="col">
+                <h2>Edit Student Details</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" class="btn btn-success" value="Update">
+                    <a href="{% url 'addandshow' %}" class="btn btn-info">Back to Home</a>
+                </form>
+            </div>
+        </div>
+
+    </div>--> 
+
+    <!--New project  -->
+    <!-- section 1 -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card shadow" style="width: 936px;">
+                    <div class="row">
+                        <div class="col-10">
+                            <img src="https://hmfamiet.in/templates/officeprime-tg/images/logo.png" class="card-img-top"
+                                style="width:750px; height: 200px ;" alt="...">
+                        </div>
+                        <div class="col-2 pt-5 text-center">
+                            <div class="row">
+                                <img src="https://media.istockphoto.com/vectors/label-certification-new-version-vector-id942287864?k=20&m=942287864&s=612x612&w=0&h=Y7GCOk_GGfR-jUW0Q6S06zRZCXgBGiybXT5rqN6vCvQ="
+                                    class="card-img-top" style="width:110px ; height:80px;" alt="...">
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.facebook.com/hmfamiet411/"><img src="https://www.guideoversands.co.uk/wp-content/uploads/2021/07/124010.png" alt="" style="padding-top:2px;width:50px; height:30px;"></a>
+                            </div>
+                            <div class="col">
+                                <a href=""><img src="https://e7.pngegg.com/pngimages/763/464/png-clipart-twitter-logo-icon-logo-twitter-logo-marine-mammal-responsive-web-design-thumbnail.png" alt="" style="padding-top:2px; margin-right:31px; width:30px; height:30px;"></a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="card-body pb-0">
+
+
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- section-2 -->
+    <div class="container" style="width: 1050;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary"
+            style="background-image: linear-gradient(rgb(1, 77, 1),rgb(3, 3, 63));">
+
+            <div class="container-fluid lh-1 hhh" style="font-size: 13px;">
+                <a class="navbar-brand" href="/ho/" style="font-size: 13px; color:rgb(18, 214, 214)">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/in/">Instutions</a>
+                            <ul class="mt-2"
+                                style="list-style: none;z-index:3; background: rgb(80, 72, 72); padding-left:0; position:absolute;">
+                                <li><a href="#">hmfa miet</a></li>
+                                <li><a href="#">hmfa polytechnic</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/ad/">Administrations</a>
+                            <ul class="mt-2"
+                                style="list-style: none; z-index:2; background: rgb(80, 72, 72); padding-left:0; position:absolute;">
+                                <li><a href="#">Chairman</a></li>
+                                <li><a href="#">Managing Director</a></li>
+                                <li><a href="#">Academics</a></li>
+                                <li><a href="#">Examination cell</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/cou/">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/de/">Department</a>
+                            <ul class="mt-2"
+                                style="list-style: none; z-index:2; background: rgb(80, 72, 72); padding-left:0; position:absolute;">
+                                <li><a href="#">Civil Engineering</a></li>
+                                <li><a href="#">Computer Science & Engineering</a></li>
+                                <li><a href="#">Electronics & Communication</a></li>
+                                <li><a href="#">Electrical & Electronics Engineering</a></li>
+                                <li><a href="#">Mechanical Engineering</a></li>
+                                <li><a href="#">MBA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/pl/">Placement Cell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/li/">library</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/con/">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            style="height: 30px;">
+                        <button class="btn btn-outline-success" type="submit"
+                            style="font-size: 7px; height: 30px;">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--section-3 -->
+    <div class="container">
+        <div class="card" style="width: 58.5rem; margin-top:8px;">
+            <div class="card-body">
+                <div class="row">
+                    <!-- first column card -->
+                    <div class="col">
+                        <div class="row">
+                            <div class="card ms-2 me-2 shadow" style="width:14rem;">
+                                <div class="card-body p-0">
+                                    <!--  nav section 2-->
+                                    <div class="row"
+                                        style="width:13.85rem;  background-image: linear-gradient(rgb(1, 77, 1),rgb(3, 3, 63)); color:antiquewhite;">
+                                        <h5>Quick Navigation</h5>
+                                    </div>
+                                    <!-- Quick Navigation part -->
+                                    <div class="nav">
+
+                                        <div class="bd-example" style=" text-decoration:none;color: rgb(0, 132, 255);">
+                                            <!-- addimission -->
+                                            <details>
+                                                <summary><a href="/AD/" style="text-decoration:none;">Addimission</a>
+                                                </summary>
+                                                <div>
+                                                    <details>
+                                                        <summary><a href="/AD/" style="text-decoration:none;">Intake</a>
+                                                           
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+
+                                                    <details>
+                                                        <summary>
+                                                            Eligibility <br>
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+
+                                                    <details>
+                                                        <summary>
+                                                            Fees Details <br>
+
+                                                        </summary>
+                                                    </details>
+
+                                                </div>
+                                            </details>
+                                            ------------------------------
+                                            <!-- courses -->
+                                            <details>
+                                                <a class="nav-link active hhh" aria-current="page" href="/cou/">Courses</a>
+                                                <div>
+                                                    <details>
+                                                        <summary>
+                                                            <a href="/AD/" style="text-decoration:none ;"> Addmissions</a>
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Media Room
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+
+                                                    <details>
+                                                        <summary>
+                                                            ED Cell
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            FUEL
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            News
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Events
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Syllabus
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Transportation
+                                                        </summary>
+                                                    </details>
+
+                                                </div>
+                                            </details>
+                                            ------------------------------
+                                            <!-- chairman -->
+                                            <details>
+                                                <summary>Chairman</summary>
+                                                <div>
+                                                    <details>
+                                                        <summary>
+                                                            <a href="/AD/" style="text-decoration:none ;"> Addmissions</a>
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Media Room
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+
+                                                    <details>
+                                                        <summary>
+                                                            ED Cell
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            FUEL
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            News
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Events
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Syllabus
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Transportation
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Alumni
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Hostel
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Transportation
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Audit Reports
+                                                        </summary>
+                                                    </details>
+
+                                                </div>
+                                            </details>
+                                            ------------------------------
+                                            <!--M.D.  -->
+                                            <details>
+                                                <summary>M.D.</summary>
+                                                <div>
+                                                    <details>
+                                                        <summary>
+                                                            <a href="/AD/" style="text-decoration:none ;"> Addmissions</a>
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Media Room
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+
+                                                    <details>
+                                                        <summary>
+                                                            ED Cell
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            FUEL
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            News
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Events
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Syllabus
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Transportation
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Alumni
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Hostel
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Transportation
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Audit Reports
+                                                        </summary>
+                                                    </details>
+
+                                                </div>
+                                            </details>
+                                            ------------------------------
+                                            <!--News  -->
+                                            <details>
+                                                <summary>
+                                                    News
+                                                </summary>
+                                            </details>
+                                            ------------------------------
+                                            <!--Events-->
+                                            <details>
+                                                <summary>
+                                                    Events
+                                                </summary>
+                                            </details>
+                                            ------------------------------
+                                            <!-- Placement Cell -->
+                                            <details>
+                                                <summary>Placement Cell</summary>
+                                                <div>
+                                                    <details>
+                                                        <summary>
+                                                            <a href="/AD/" style="text-decoration:none ;"> Addmissions</a>
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Media Room
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+
+                                                    <details>
+                                                        <summary>
+                                                            ED Cell
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            FUEL
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            News
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Events
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Syllabus
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Transportation
+                                                        </summary>
+                                                    </details>
+                                                </div>
+                                            </details>
+                                            ------------------------------
+                                            <!-- Library -->
+                                            <details>
+                                                <summary>Library</summary>
+                                                <div>
+                                                    <details>
+                                                        <summary>
+                                                            About
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+                                                    <details>
+                                                        <summary>
+                                                            Services
+
+                                                        </summary>
+                                                    </details>
+                                                    ------------------------------
+
+                                                    <details>
+                                                        <summary>
+                                                            Membership
+
+                                                        </summary>
+                                                    </details>
+
+                                                </div>
+                                            </details>
+                                            ------------------------------
+                                            <!--Attendance-->
+                                            <details>
+                                                <summary>Attendance</summary>
+                                            </details>
+                                            ------------------------------
+                                            <!--  -->
+                                            <!--Milestones-->
+                                            <details>
+                                                <summary>Milestones</summary>
+                                            </details>
+                                            ------------------------------
+                                            <!--Alumni  -->
+
+                                            <details>
+                                                <summary>Alumni </summary>
+                                            </details>
+                                            ------------------------------
+                                            <!--Hostel  -->
+
+                                            <details>
+                                                <summary>Hostel</summary>
+                                            </details>
+                                            ------------------------------
+
+                                            <!--Transportation-->
+                                            <details>
+                                                <summary>Transportation</summary>
+                                            </details>
+                                            ------------------------------
+                                            <!-- Audit Reports -->
+                                            <details>
+                                                <summary>Audit Reports</summary>
+                                            </details>
+                                            ------------------------------
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="row">
+                            <div class="card ms-2 me-2 mt-1 shadow" style="width:14rem;">
+                                <div class="card-body p-0">
+                                    <div class="row"
+                                        style="width:13.85rem;  background-image: linear-gradient(rgb(1, 77, 1),rgb(3, 3, 63)); color:antiquewhite;">
+                                        <h5>Admin Login</h5>
+                                    </div>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Username</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary p-0 rounded btn-sm">Sign
+                                            in</button>
+                                    </form>
+                                    <ul style="font-size: 12px; color:rgb(0, 110, 255)">
+                                        <li>Forgot Your username?</li>
+                                        <li>Forgot Your password?</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--  -->
+                    </div>
+
+                    <!-- second column card -->
+                    <div class="card shadow" style="width: 28rem;">
+
+                        <div class="card-body pt-1 ps-0 pe-0">
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                <!-- <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div> -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/4263/2019/4/4/Campus%20view%20of%20HMFA%20Memorial%20Institute%20of%20Engineering%20and%20Technology%20Allahabad_Campus-view.jpg"
+                                            class="d-block w-100" style="height:238px;" alt="...">
+                                        <!-- <div class="carousel-caption d-none d-md-block "> -->
+                                        <div class="position-absolute bottom-0 start-0 bg-dark text-white w-100"
+                                            style="z-index:0 ; opacity:0.6">
+                                            Administration</div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.edpro.in/uploads/article/02-05-20-1304-mo.jpg"
+                                            class="d-block w-100" alt="...">
+                                        <div class="position-absolute bottom-0 start-0 bg-dark text-white w-100"
+                                            style="z-index:0 ; opacity:0.6">
+                                            Student</div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://hmfamiet.in/templates/officeprime-tg/slideshow/slider/3.jpg"
+                                            class="d-block w-100" alt="...">
+                                        <div class="position-absolute bottom-0 start-0 bg-dark text-white w-100"
+                                            style="z-index:0 ; opacity:0.6;">
+                                            Lab</div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <h6 style="font-size:8; margin-top:15px; color:maroon;">
+                                <img class="gmi" style="width: 25px;"
+                                    src="https://anglais-lp.spip.ac-rouen.fr/local/cache-vignettes/L389xH313/arton437-60533.jpg?1647278281">
+                                Registration Started for session 2022-2023.
+                            </h6>
+                            <!--  -->
+                            <marquee height="170" scrollamount="1" bgcolor="#8BEDF4" direction="up">
+                                <img class="gmi"  style=" width: 25px;"
+                                    src="https://anglais-lp.spip.ac-rouen.fr/local/cache-vignettes/L389xH313/arton437-60533.jpg?1647278281">
+                                Registration Started for session 2022-2023.<br><br>
+                                <img class="gmi" style="width: 25px;"
+                                    src="https://anglais-lp.spip.ac-rouen.fr/local/cache-vignettes/L389xH313/arton437-60533.jpg?1647278281">
+                                Pradhan Mantri Kaushal Vikas Yojana (PMKVY),Registration Started for new batch.
+                                <br><br>
+                                <img class="gmi" style="width: 25px;"
+                                    src="https://anglais-lp.spip.ac-rouen.fr/local/cache-vignettes/L389xH313/arton437-60533.jpg?1647278281">
+                                Pradhan Mantri Kaushal Vikas Yojana (PMKVY),Registration Started for new batch.
+                                <br> <br><img class="gmi" style="width: 27px;"
+                                    src="https://anglais-lp.spip.ac-rouen.fr/local/cache-vignettes/L389xH313/arton437-60533.jpg?1647278281">
+                                Pradhan Mantri Kaushal Vikas Yojana (PMKVY),Registration Started for new batch.
+                            </marquee>
+                            <!--  -->
+                            <hr style="margin-top:30px;">
+                            <h6 style="color:#008080; font-size:14px;">Welcome to HMFA Memorial Institute of Engg. &
+                                Technology</h6>
+                            <hr>
+                            <h6 style="margin-left:15px; color:#008080; font-size:14px;">Our Vision</h6>
+                            <p style="font-weight:10px;">To Impart technical education of the highest standards,
+                                producing technically competent confident and socially responsible engineers</p>
+                            <h6 style="color: #008080; font-size:14px;">Our Mission</h6>
+                            <ul style="list-style-type: disc;">
+                                <li><span style="font-size: 10pt; font-family: 'trebuchet ms', geneva;">To Impart
+                                        adequate fundamental knowledge,technical and soft skils to students.</span></li>
+                                <li><span style="font-size: 10pt; font-family: 'trebuchet ms', geneva;">To make learning
+                                        process exciting,stimulating and joyful.</span></li>
+                                <li><span style="font-size: 10pt; font-family: 'trebuchet ms', geneva;">To create a
+                                        climate conducive to excellent teaching - learning Process.</span></li>
+                                <li><span style="font-family: 'trebuchet ms', geneva; font-size: 10pt;">To bring out
+                                        creativity in students.</span></li>
+                                <li><span style="font-size: 10pt; font-family: 'trebuchet ms', geneva;">To contribute to
+                                        advancement of engineering &amp; technology.</span></li>
+                                <li><span style="font-size: 10pt; font-family: 'trebuchet ms', geneva;">To make positive
+                                        contribution to meet societal needs.</span></li>
+                            </ul>
+
+                            <!--  -->
+                        </div>
+                    </div>
+                    <!-- Third column card -->
+                    <div class="col">
+                        <!-- third colomn card first row  -->
+                        <div class="row">
+                            <div class="card shadow ms-2" style="width: 14rem;">
+                                <div class="card-body">
+                                    <h6 class="rd"
+                                        style="padding:5px; border-radius: 4px; background-color:rgb(16, 46, 58);color:antiquewhite;">
+                                        R$D and Consultancy</h6>
+                                    <hr>
+                                    
+                                    <a href="https://hmfamiet.in/images/forms/registration_form.pdf" style="color: red; line-height : 0px; text-decoration:none;" class="hhh">Registration form</a>
+                                
+                                    <!-- <h6 style="line-height : 0px; color:red">Registration form</h6> -->
+                                    <hr>
+                                    <h6 class="hhh" style="font-size: smaller;color:rgb(16, 122, 148)">
+                                        <a href="https://erp.aktu.ac.in/WebPages/OneView/OneView.aspx" style="text-decoration:none !important;"><img class="gmi" style="width: 25px;"
+                                            src="https://anglais-lp.spip.ac-rouen.fr/local/cache-vignettes/L389xH313/arton437-60533.jpg?1647278281">
+                                        Results</a>
+                                    </h6>
+                                    <hr>
+                                    <a href="https://hmfamiet.in/images/syllabus/aictemodelcurricullumstructure-min.pdf"  class="hhh" style="font-size:small;line-height : 0px; color:rgb(7, 78, 94); text-decoration:none;">AICTE Approved</a>  
+                                    <hr>
+                                    <h6 class="hhh" style="font-size:smaller;line-height : 0px; color:rgb(16, 122, 148)">Anti Ragging Committee</h6>
+                                    <hr>
+                                    <h6 class="hhh" style="font-size:smaller;line-height : 0px; color:red;">Grievance & Cell</h6>
+                                    <hr>
+                                    <a href="https://hmfamiet.in/index.php/importent-link.html" class="hhh" style="font-size:x-small;color:rgb(16, 122, 148); text-decoration:none;">
+                                        <img class="gmi" style="width: 25px;"
+                                            src="https://anglais-lp.spip.ac-rouen.fr/local/cache-vignettes/L389xH313/arton437-60533.jpg?1647278281">
+                                        Important Links</a>
+                                    
+                                    <hr>
+                                    <a href="https://hmfamiet.in/images/forms/migration_form.pdf" class="hhh" style="font-size:x-small; line-height : 0px; color:#150d86; text-decoration:none;">Migration Form</a>
+                                    <img class=" gmi" style="line-height : 0px; width: 25px;"
+                                            src="https://anglais-lp.spip.ac-rouen.fr/local/cache-vignettes/L389xH313/arton437-60533.jpg?1647278281">
+                                        
+                                   
+                                    <hr>
+                                    <h6 class="hhh" style="font-size:x-small;color:rgb(21, 13, 134);">
+                                        <img class="gmi" style="width: 25px;"
+                                            src="https://anglais-lp.spip.ac-rouen.fr/local/cache-vignettes/L389xH313/arton437-60533.jpg?1647278281">
+                                        Digital Payment for all
+                                    </h6>
+                                    <hr>
+                                    <h6 class="hhh" style="font-size:x-small; line-height : 0px;color:rgb(21, 13, 134);">Facilities</h6>
+                                    <hr>
+                                    <h6 class="hhh" style="font-size:x-small; line-height : 0px; color:rgb(21, 13, 134);">Gallery</h6>
+                                    <hr>
+                                    <h6 class="hhh" style="font-size:x-small; line-height : 0px; color:rgb(21, 13, 134);">Aicte Feedback</h6>
+                                    <hr>
+                                    <h6 class="rd"
+                                        style="padding:5px; border-radius: 4px; background-color:rgb(16, 46, 58);color:antiquewhite;">
+                                        R$D and Consultancy</h6>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--third column card second row -->
+                        <div class="row">
+                            <div class="card shadow ms-2 mt-1" style="width: 14rem;">
+                                <div class="card-body">
+                                    <marquee height="170" scrollamount="1" bgcolor="#8BEDF4" direction="up">
+                                    <h4 style="font-size:14px; color:rgb(16, 122, 148);"> Pradhan Mantri Kaushal Vikas Yojana Kendra (PMKVY),Registration started for new batch</h4>
+                                    <p style="font-size:11px; color:black;">Department of Mechanical</p>
+                                    <br>
+                                    <h4 style="font-size:14px; color:rgb(16, 122, 148);"> Pradhan Mantri Kaushal Vikas Yojana Kendra (PMKVY),Registration started for new batch</h4>
+                                    <p style="font-size:11px; color:black;">Department of Mechanical</p>
+                                    <br>
+                                    <h4 style="font-size:14px; color:rgb(16, 122, 148);"> Pradhan Mantri Kaushal Vikas Yojana Kendra (PMKVY),Registration started for new batch</h4>
+                                    <p style="font-size:11px; color:black;">Department of Mechanical </p>
+                                    <br>
+                                    </marquee> 
+                    
+                                     <!--  -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--third column card third row  -->
+                        <div class="row">
+                            <div class="card shadow ms-2 mt-1" style="width: 14rem;">
+                                <div class="card-body">
+                                    <img style="width:10"
+                                        src="data:image/jpeg;base64,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"
+                                        alt="">
+                                    <p style="color: red; font-size:10px;">Ragging is strictly prohibited on and of the
+                                        campus</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+            <!--footer  -->
+            <div style=" margin: 0 auto; padding: 5px 0 0 0; background: #555;border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; color:aliceblue; box-shadow: 0 0 5px #555;"
+                class="row text-center mt-3 ms-0 me-0">
+                <dt>© All rights reserved.</dt>
+                <dd>HMFA Memorial Institute of Engineering & <br> Technology,Handia,Allahabad</dd>
+                <!--  -->
+                <div class="tg">
+                    <span style="padding-left:630px"> </span>
+                </div>
+            </div>
+            <!--footer close  -->
+        </div>
+    </div>
+    <!--text code  -->
+
+    <!--  -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'app/js/all.min.js'%}"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

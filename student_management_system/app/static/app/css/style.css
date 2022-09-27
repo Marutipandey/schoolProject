@@ -1,0 +1,106 @@
+ /* .card{
+            border-radius: 40px 0px 40px 0px;
+            
+        } */
+
+.card-1{
+    background-color: rgb(181, 226, 92);
+}
+.card-2{
+    background-color: rgb(188, 188, 226);
+}
+.card-3{
+    background-color: rgb(233, 141, 141);
+}
+.card-4{
+    background-color: greenyellow;
+}
+/* .carousel-item{ 
+    width: 100%;
+}*/
+.container-1{
+    padding-top: 80px;
+    width: 100%;
+}
+ 
+
+ul li a{
+    /* width: 150px; */
+    color: aliceblue;
+    display: block;
+    text-decoration: none;
+    /* font-size: 5px; */
+    /* text-align: center; */
+    padding: 5px;
+    /* border-radius: 10px; */
+/* font-family: Century Gothic;
+font-weight: bold;      */
+} 
+
+
+a:hover{
+/* background: #079ab4; */
+}
+
+ul li ul li{
+float: none;
+}
+ul li ul{
+display: none; 
+}
+ul li:hover ul{
+display: block; 
+}
+
+
+.rd{
+     animation: changebg 1s linear infinite;
+}@keyframes changebg{
+    50%{
+        color: rgb(173, 176, 179);
+    }100%{
+        color:yellow;
+    }
+}
+
+#centercontent_md {
+    width: 725px;
+    float: left;
+    overflow: hidden;
+    padding-left: 3px;
+}
+
+
+  
+/* img */
+/*.gmi{
+    animation: changegb 0.5s linear infinite;
+    position: relative;
+    
+}@keyframes changegb{
+   from{
+       transform: rotate(0deg);
+   }to{
+    transform: rotate(360deg);
+   }
+}
+.gmi:after{
+position: absolute;
+background-color: red;
+}*/
+
+
+   
+
+/*  */
+.tg{
+    background: none repeat scroll 0 0 #5b5b5b;
+    border-radius: 7px;
+    clear: both;
+    color: #c6c6c6;
+    font-size: 11px;
+    padding: 5px;
+    position: relative;
+    
+}
+
